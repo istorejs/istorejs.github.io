@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Main Css file -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Boostrap4 css link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Интенсив JS</title>
+</head>
+<body>
+
+    <!-- Шапка сайта  -->
+    <header class="header">
+        <!-- Текст-логотип в шапке -->
+            <h1><small>i</small>Store</h1>
+                    <!-- Переключатель с текстом -->
+                    <div class="night-mode">
+                        <!-- Текст переключателя -->
+                            <h2 class="header-text">Ночная тема</h2>
+                            <!-- Переключатель -->
+                            <label id="switcher" class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                              </label>
+            </div>
+    </header>
+
+    <!-- Большой блок с товарами -->
+    <main class="main">
+        <!-- Контейнер для создания системы сеток boostrap -->
+        <div class="container">
+            <!-- Блок для колонок boostrap -->
+            <div class="row">
+                <!-- Блок ,занимающий 4 колонки из 12 boostrap и весь контент в нём выровнен по центру с помощь. класса "text-center"-->
+                <!-- Следующие 3 блока имеют одинаковую структуру, поэтому комментариев к ним нет -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <!-- Блок с товаром -->
+                        <div class="wrap-block">
+                            <!-- Название товара -->
+                                <h3>iPhone XR</h3>
+                                <!-- Картинка товара -->
+                                <img id="iphoneXR" class="img-block" height="400px" src="/img/1.png" alt="iPhone XR">
+                                <!-- Блок с кнопками цветов товара -->
+                                <div class="btn-block">
+                                    <!-- Текст блока с кнопками цветов товара -->
+                                    <h2>Цвета:</h2>
+                                    <!-- Чёрная кнопка -->
+                                    <button id="btn-black__XR" class="btn btn-black"></button>
+                                    <!-- Красная кнопка -->
+                                    <button id="btn-red__XR" class="btn btn-red"></button>
+                                    <!-- Жёлтая кнопка -->
+                                    <button id="btn-yellow__XR" class="btn btn-yellow"></button>
+                                </div>
+                                <!-- Блок с gb для товара -->
+                                <div class="size">
+                                    <!-- кнопка 64 gb -->
+                                    <button id="btn64XR" class="btn-size">64 ГБ</button>
+                                    <!-- кнопка 128 gb -->
+                                    <button id="btn128XR" class="btn-size">128 ГБ</button>
+                                    <!-- кнопка 256 gb -->
+                                    <button id="btn256XR" class="btn-size">256 ГБ</button>
+                                </div>
+                                <!-- Текст с ценой товара -->
+                                <span id="iphoneXR-text" class="price">799$</span>
+                            </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                        <div class="wrap-block">
+                                <h3>iPhone X</h3>
+                                <img id="iphoneX" class="img-block" height="400px" src="/img/4.png" alt="iPhone X">
+                                <div class="btn-block">
+                                        <h2>Цвета:</h2>
+                                    <button id="btn-white__X" class="btn btn-white"></button>
+                                    <button id="btn-black__X" class="btn btn-black"></button>
+                                </div>
+                                <div class="size">
+                                    <button id="btn64X" class="btn-size">64 ГБ</button>
+                                    <button id="btn128X" class="btn-size">128 ГБ</button>
+                                    <button id="btn256X" class="btn-size">256 ГБ</button>
+                                </div>
+                                <span id="iphoneX-text" class="price">499$</span>
+                            </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                        <div class="wrap-block">
+                                <h3>iPhone 8</h3>
+                                <img id="iphone8" class="img-block" height="400px" src="/img/6.png" alt="iPhone Xs">
+                                <div class="btn-block">
+                                        <h2>Цвета:</h2>
+                                    <button id="btn-white__8" class="btn btn-white"></button>
+                                    <button id="btn-black__8" class="btn btn-black"></button>
+                                    <button id="btn-gold__8" class="btn btn-gold"></button>
+                                </div>
+                                <div class="size">
+                                    <button id="btn64__8" class="btn-size">64 ГБ</button>
+                                    <button id="btn128__8" class="btn-size">128 ГБ</button>
+                                    <button id="btn256__8" class="btn-size">256 ГБ</button>
+                                </div>
+                                <span id="iphone8-text" class="price">400$</span>
+                            </div>
+                </div>
+                <!-- Блок, занимающий 4 колонки и выравниваемый по центру с помощью отсутпов по бокам в 2 колонки -->
+                <!-- Следующие 2 блока не видны( cделано классом "display-none"). Появляются при клике на кнопку "Загрузить ещё"(с помощтю JS) -->
+                <div id="newIphone" class="col-lg-4 col-md-6 text-center display-none">
+                        <div class="wrap-block">
+                                <h3>iPhone Xs</h3>
+                                <img id="iphoneXS" class="img-block" height="400px" src="/img/11.png" alt="iPhone Xs">
+                                <div class="btn-block">
+                                        <h2>Цвета:</h2>
+                                    <button id="btn-white__XS" class="btn btn-white"></button>
+                                    <button id="btn-black__XS" class="btn btn-black"></button>
+                                    <button id="btn-gold__XS" class="btn btn-gold"></button>
+                                </div>
+                                <div class="size">
+                                    <button id="btn64__XS" class="btn-size">64 ГБ</button>
+                                    <button id="btn128__XS" class="btn-size">128 ГБ</button>
+                                    <button id="btn256__XS" class="btn-size">256 ГБ</button>
+                                </div>
+                                <span id="iphoneXS-text" class="price">1000$</span>
+                            </div>
+                </div>
+                <div id="newIphone" class="col-lg-4 col-md-6 text-center display-none">
+                        <div class="wrap-block">
+                                <h3>iPhone SE</h3>
+                                <img id="iphoneSE" class="img-block" height="400px" src="/img/14.png" alt="iPhone Xs">
+                                <div class="btn-block">
+                                        <h2>Цвета:</h2>
+                                    <button id="btn-white__SE" class="btn btn-white"></button>
+                                    <button id="btn-black__SE" class="btn btn-black"></button>
+                                    <!-- Розовая кнопка -->
+                                    <button id="btn-pink__SE" class="btn btn-pink"></button>
+                                </div>
+                                <div class="size">
+                                    <button id="btn64__SE" class="btn-size">64 ГБ</button>
+                                    <button id="btn128__SE" class="btn-size">128 ГБ</button>
+                                    <button id="btn256__SE" class="btn-size">256 ГБ</button>
+                                </div>
+                                <span id="iphoneSE-text" class="price">150$</span>
+                            </div>
+                </div>
+                <div id="newIphone" class="col-lg-4 col-md-6 text-center display-none">
+                    <div class="wrap-block">
+                            <h3>iPhone SE</h3>
+                            <img id="iphoneSE" class="img-block" height="400px" src="/img/14.png" alt="iPhone Xs">
+                            <div class="btn-block">
+                                    <h2>Цвета:</h2>
+                                <button id="btn-white__SE" class="btn btn-white"></button>
+                                <button id="btn-black__SE" class="btn btn-black"></button>
+                                <!-- Розовая кнопка -->
+                                <button id="btn-pink__SE" class="btn btn-pink"></button>
+                            </div>
+                            <div class="size">
+                                <button id="btn64__SE" class="btn-size">64 ГБ</button>
+                                <button id="btn128__SE" class="btn-size">128 ГБ</button>
+                                <button id="btn256__SE" class="btn-size">256 ГБ</button>
+                            </div>
+                            <span id="iphoneSE-text" class="price">150$</span>
+                        </div>
+            </div>
+                <!-- Блок, занимающий 2 колонки с отступами в 5 колонок по бокам -->
+                <div class="col-lg-12 text-center">
+                    <!-- Кнопка загрузить ещё -->
+                    <button class="btn-add">Загрузить ещё</button>
+                </div>
+
+                
+            </div>
+        </div>
+    </main>
+    <!-- Boostap JS links -->
+   <script src="/js/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
